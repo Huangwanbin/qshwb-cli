@@ -1,6 +1,7 @@
 const path = require('path');   //路径处理模块
 const fs = require('fs-extra'); //文件处理模块
 const inquirer = require('inquirer');   //询问模块
+const Generator = require('../lib/Generator.js')
 
 module.exports = async function(name,options){
     //获取当前命令行执行地址
@@ -39,12 +40,11 @@ module.exports = async function(name,options){
                 //overwrite
                 console.log('overwrite doing~');
                 await fs.remove(targetAir)
-                //创建目录
-
             }
         }
-    }else{
-        //TODO 直接创建目录
-        console.log('直接创建');
     }
+    //创建目录
+    const generator = new Generator(name,targetAir)
+    generator.create()
+    
 }
