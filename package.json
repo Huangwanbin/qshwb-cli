@@ -9,8 +9,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["cli","hwb-cli"],
+  "author": {
+    "name": "hwb",
+    "email": "huangwanbin95@95.com"
+  },
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
